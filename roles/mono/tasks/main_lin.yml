@@ -1,4 +1,4 @@
 - name: Install Mono
   apt:
-    name: mono-devel
+    name: mono-complete
     state: latest
