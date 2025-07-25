@@ -10,37 +10,25 @@
 - name: Install generally useful packages
   apt:
     name:
-      - blender
       - build-essential
       - chromium-browser
       - cifs-utils
       - curl
-      - dosbox
       - emacs
       - ffmpeg
       - firefox
       - gdb
       - git
-      - git-cola
-      - git-gui
-      - i3
       - inkscape
       - ipcalc
       - jq
-      - kate
-      - kdiff3
-      - krita
-      - kwrite
-      - libhivex-bin
       - mpv
       - ncat
       - nethack-console
       - nfs-common
       - nmap
       - overlayroot
-      - pcmanfm-qt
       - qemu
-      - qemu-kvm
       - qemu-utils
       - qutebrowser
       - rsync
@@ -51,11 +39,9 @@
       - tmux
       - ttf-mscorefonts-installer
       - vim
-      - virt-manager
       - vlc
       - webext-ublock-origin-chromium
       - webext-ublock-origin-firefox
-      - wine-development
       - zsh
     state: latest
     update_cache: yes
