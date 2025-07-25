@@ -10,43 +10,44 @@
 - name: Install generally useful packages
   apt:
     name:
-      - i3
-      - sway
-      - vlc
-      - mpv
-      - ffmpeg
-      - emacs
-      - kwrite
-      - kate
-      - krita
       - blender
-      - inkscape
-      - pcmanfm-qt
-      - qutebrowser
       - chromium-browser
+      - cifs-utils
+      - curl
+      - dosbox
+      - emacs
+      - ffmpeg
       - firefox
+      - git-cola
+      - git-gui
+      - i3
+      - inkscape
+      - kate
+      - kdiff3
+      - krita
+      - kwrite
+      - libhivex-bin
+      - mpv
+      - nethack-console
+      - nfs-common
+      - overlayroot
+      - pcmanfm-qt
       - qemu
       - qemu-kvm
       - qemu-utils
+      - qutebrowser
+      - screen
+      - strace
+      - sway
+      - thonny
+      - tmux
+      - ttf-mscorefonts-installer
       - virt-manager
-      - wine-development
-      - dosbox
+      - vlc
       - webext-ublock-origin-chromium
       - webext-ublock-origin-firefox
-      - nethack-console
+      - wine-development
       - zsh
-      - tmux
-      - screen
-      - curl
-      - git-gui
-      - git-cola
-      - kdiff3
-      - thonny
-      - ttf-mscorefonts-installer
-      - libhivex-bin
-      - overlayroot
-      - nfs-common
-      - cifs-utils
     state: latest
     update_cache: yes
 
