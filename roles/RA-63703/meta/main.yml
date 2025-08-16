@@ -10,6 +10,7 @@ dependencies:
   - role: gcc-arm
   - role: git
   - role: visual2
+#  - role: winidea-frisms
 
 #TODO Writable d:\RAVINOR directory
 

@@ -11,3 +11,9 @@
       dest: /opt/logisim
       remote_src: yes
       creates: /opt/logisim/META-INF/MANIFEST.MF
+  - name: Download and unpack Logisim - Evolution
+    unarchive:
+      src: https://github.com/logisim-evolution/logisim-evolution/releases/download/v3.9.0/logisim-evolution-3.9.0-all.jar
+      dest: /opt/logisim-evolution
+      remote_src: yes
+      creates: /opt/logisim-evolution/META-INF/MANIFEST.MF

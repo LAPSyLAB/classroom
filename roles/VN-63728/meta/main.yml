@@ -8,7 +8,8 @@ dependencies:
   - role: ltspice
   - role: pulseview
   - role: putty
-  - role: stm32algobuilder   #(ni še exe. Datoteke - ne dobim iz ST portala)
-  - role: stm32unicleogui
-  
+  - role: stm32mems-studio    # replaces algobuilder and unicleogui
+#  - role: stm32algobuilder   #(ni še exe. Datoteke - ne dobim iz ST portala)
+#  - role: stm32unicleogui
+ 
 #TODO Writable d:\RAVINOR directory
