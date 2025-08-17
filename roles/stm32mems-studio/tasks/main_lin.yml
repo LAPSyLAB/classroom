@@ -1,4 +1,4 @@
-- name: Do not install UnicleoGUI
+- name: Do not install mems-studio
   debug:
-    msg: "Do not install UnicleoGUI on Linux"
+    msg: "Do not install mems-studio on Linux"
 

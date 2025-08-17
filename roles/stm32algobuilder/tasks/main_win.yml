@@ -1,31 +1,34 @@
-# TODO check install status
+# Deprecated - replace by mems-studio
+- name: Do not install AlgoBuilder
+  debug:
+    msg: "Do not install AlgoBuilder on Windows - deprecated"
 # TODO: Exe file is missing - Problem on ST site
-- name: Check AlgoBuilder install status
-  win_stat:
-    path: C:\Program Files (x86)\Thonny\thonny.exe
-  register: file
+# - name: Check AlgoBuilder install status
+#   win_stat:
+#     path: C:\Program Files (x86)\Thonny\thonny.exe
+#   register: file
 
-- when: not file.stat.exists
-  block:
-    - name: Download AlgoBuilder
-      win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EdBQJN3I6fVFj7qgs6SjRp4BZ0QbWIV26NUlLv_4d9JsDQ?e=hA4Cbl&download=1" -O C:\AlgoBuilderSuite.exe
-      args:  
-        creates: C:\AlgoBuilderSuite.exe
-      #win_get_url:
-      #  follow_redirects: all
-      #  http_agent: Wget/1.21.3
-      # url: https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EdBQJN3I6fVFj7qgs6SjRp4BZ0QbWIV26NUlLv_4d9JsDQ?e=hA4Cbl?download=1
-      #  dest: C:\AlgoBuilderSuite.exe
-      #register: download
+# - when: not file.stat.exists
+#   block:
+#     - name: Download AlgoBuilder
+#       win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EdBQJN3I6fVFj7qgs6SjRp4BZ0QbWIV26NUlLv_4d9JsDQ?e=hA4Cbl&download=1" -O C:\AlgoBuilderSuite.exe
+#       args:  
+#         creates: C:\AlgoBuilderSuite.exe
+#       #win_get_url:
+#       #  follow_redirects: all
+#       #  http_agent: Wget/1.21.3
+#       # url: https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EdBQJN3I6fVFj7qgs6SjRp4BZ0QbWIV26NUlLv_4d9JsDQ?e=hA4Cbl?download=1
+#       #  dest: C:\AlgoBuilderSuite.exe
+#       #register: download
     
-    - name: Install AlgoBuilder
-      win_package:
-        path: C:\AlgoBuilderSuite.exe
-        # path: "{{ download.dest }}"
-        arguments: /Verysilent /AllUsers
+#     - name: Install AlgoBuilder
+#       win_package:
+#         path: C:\AlgoBuilderSuite.exe
+#         # path: "{{ download.dest }}"
+#         arguments: /Verysilent /AllUsers
     
-    - name: Remove temporary files
-      win_file:
-        path: C:\AlgoBuilderSuite.exe
-        # path: "{{ download.dest }}"
-        state: absent
+#     - name: Remove temporary files
+#       win_file:
+#         path: C:\AlgoBuilderSuite.exe
+#         # path: "{{ download.dest }}"
+#         state: absent
