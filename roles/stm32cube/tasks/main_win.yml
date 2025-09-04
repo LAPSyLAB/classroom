@@ -26,7 +26,8 @@
     #    arguments: /S
 
     - name: Download CubeProgrammer
-      win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EXHsKDjM6hVAuEGwEWcMyBEBgx7D9i_M3QAkhpe9RR9zPQ?e=VcUvvu" -O "{{ cubeprogrammer_download_file }}"
+      win_command: wget "{{ installers }}\RAVINOR\2025\SetupSTM32CubeProgrammer_win64.exe" -O "{{ cubeprogrammer_download_file }}"
+      #win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EXHsKDjM6hVAuEGwEWcMyBEBgx7D9i_M3QAkhpe9RR9zPQ?e=VcUvvu" -O "{{ cubeprogrammer_download_file }}"
       #win_get_url:
       #  dest: C:\CubeProgrammer.exe
       #register: cubeprogrammer_download
@@ -42,7 +43,8 @@
     # TODO 2025: only zip distributions exists in zip file
     # TODO 2025: URL: https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EcU8MQwONYZKuk22puks-IgBd1qLM94DH3AA_CEclIgTZg?e=jRcA3v
     # TODO 2025: Have extracted setup exe - not sure if this is enough!
-      win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EbVvZi3q7QRNqwocCSgMvGgB-eYM2mtb-IidD1UTaMgtbw?e=QDxd29" -O "{{ cubemonitor_download_file }}"
+    #  win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EbVvZi3q7QRNqwocCSgMvGgB-eYM2mtb-IidD1UTaMgtbw?e=QDxd29" -O "{{ cubemonitor_download_file }}"
+      win_command: wget "{{ installers }}\RAVINOR\2025\setupSTM32CubeMonitor_1.10.0.exe" -O "{{ cubemonitor_download_file }}"
       #win_get_url:
       #  dest: C:\CubeMonitor.exe
       #register: cubemonitor_download
@@ -70,7 +72,8 @@
 
     - name: Download CubeIDE
       # win_get_url:
-      win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EZLOLK_5IxpPvnI_rYH6hSMBuQyH3EEq9bqZr9X_n6cgzA?e=P218RC" -O "{{ cubeide_download_file }}"
+      #win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EZLOLK_5IxpPvnI_rYH6hSMBuQyH3EEq9bqZr9X_n6cgzA?e=P218RC" -O "{{ cubeide_download_file }}"
+      win_command: wget "{{ installers }}\RAVINOR\2025\st-stm32cubeide_1.19.0_25607_20250703_0907_x86_64.exe" -O "{{ cubeide_download_file }}"
       #dest: C:\st-stm32cubeide_1.19.0_25607_20250703_0907_x86_64.exe
       #register: cubeide_download
       args:

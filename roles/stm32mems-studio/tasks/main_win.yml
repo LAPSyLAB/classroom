@@ -6,7 +6,8 @@
 - when: not file.stat.exists
   block:
     - name: Download MEMS-Studio
-      win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EXgZSDD5LgtMrikaKszPliwB1vXrwUxea3eYYObT3zXBaQ?e=eNJyLA" -O C:\mems-studio-2.1.2.exe
+      #win_command: wget "https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/EXgZSDD5LgtMrikaKszPliwB1vXrwUxea3eYYObT3zXBaQ?e=eNJyLA" -O C:\mems-studio-2.1.2.exe
+      win_command: wget "{{ installers }}\RAVINOR\2025\mems-studio-2.1.2.exe" -O C:\mems-studio-2.1.2.exe
       args:  
         creates: C:\mems-studio-2.1.2.exe
       #win_get_url:

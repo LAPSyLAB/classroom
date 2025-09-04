@@ -12,7 +12,8 @@
 
 - name: Download stm32
   command:
-    cmd: wget 'https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/ERLZDFSgbO1Hm6TT9CLhyUIBZS-4anic7RWtvQliqN-thA?e=KZq4VJ' -O {{ dest_fname }}
+    # cmd: wget 'https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/ERLZDFSgbO1Hm6TT9CLhyUIBZS-4anic7RWtvQliqN-thA?e=KZq4VJ' -O {{ dest_fname }}
+    cmd: wget  {{ installers }}\RAVINOR\2025\st-stm32cubeide_1.19.0_25607_20250703_0907_amd64.sh  -O {{ dest_fname }}
     creates: "{{ dest_fname }} "
     # url: https://unilj-my.sharepoint.com/:u:/g/personal/rozman_fri1_uni-lj_si/ERLZDFSgbO1Hm6TT9CLhyUIBZS-4anic7RWtvQliqN-thA?e=KZq4VJ
 
